@@ -1,0 +1,10 @@
+fileName = input("Enter the filename to be opened : ")
+file = open(fileName, "r")
+fileData = file.read().split()
+print(fileData)
+fileData = [int(i) for i in fileData]
+print(fileData)
+print("There are " + str(len(fileData)) + " scores")
+print("Sum: ",sum(fileData))
+avg = (sum(fileData) / len(fileData))
+print("Average: ",round(avg, 2))
